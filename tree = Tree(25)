@@ -1,0 +1,16 @@
+tree = Tree(25)
+tree.insert(15)
+if 25:
+	if 15 < 25:
+		if self.left is None:  # if nothing is stored in the left child of this parent node
+			self.left = Tree(15)
+		else:
+			self.left.insert(15)  # go to the left child of the current parent you are at and run this thing again
+	else:
+		if self.right is None:
+			self.right = Tree(15)
+		else:
+			self.right.insert(15)
+else:
+	self.data = 15
+

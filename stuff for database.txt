@@ -1,0 +1,227 @@
+Microsoft Windows [Version 10.0.17763.615]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\JWcam>cd desktop
+
+C:\Users\JWcam\Desktop>cd all_projects
+
+C:\Users\JWcam\Desktop\All_projects>cd flask23
+
+C:\Users\JWcam\Desktop\All_projects\Flask23>python
+Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from flaskblog import db
+C:\Python37\lib\site-packages\flask_sqlalchemy\__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+>>> db.session
+<sqlalchemy.orm.scoping.scoped_session object at 0x000002D3338EC160>
+>>> db.query.all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'SQLAlchemy' object has no attribute 'query'
+>>> db.session.query()
+<flask_sqlalchemy.BaseQuery object at 0x000002D333C007B8>
+>>> db.session.query().all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Python37\lib\site-packages\sqlalchemy\orm\query.py", line 3168, in all
+    return list(self)
+  File "C:\Python37\lib\site-packages\sqlalchemy\orm\query.py", line 3320, in __iter__
+    context = self._compile_context()
+  File "C:\Python37\lib\site-packages\sqlalchemy\orm\query.py", line 3870, in _compile_context
+    "Query contains no columns with which to " "SELECT from."
+sqlalchemy.exc.InvalidRequestError: Query contains no columns with which to SELECT from.
+>>> db.session.all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'scoped_session' object has no attribute 'all'
+>>> db.session.query()
+<flask_sqlalchemy.BaseQuery object at 0x000002D333C007F0>
+>>> session.query.all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'session' is not defined
+>>> exit()
+
+C:\Users\JWcam\Desktop\All_projects\Flask23>python
+Python 3.7.3 (v3.7.3:ef4ec6ed12, Mar 25 2019, 22:22:05) [MSC v.1916 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from flaskblog import db
+C:\Python37\lib\site-packages\flask_sqlalchemy\__init__.py:835: FSADeprecationWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True or False to suppress this warning.
+  'SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and '
+>>> db.query.all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'SQLAlchemy' object has no attribute 'query'
+>>> User.query.all()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'User' is not defined
+>>> db.session
+<sqlalchemy.orm.scoping.scoped_session object at 0x000002319F061F28>
+>>> db.session()
+<sqlalchemy.orm.session.SignallingSession object at 0x000002319D224080>
+>>> from flaskblog import User, Post
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ImportError: cannot import name 'User' from 'flaskblog' (C:\Users\JWcam\Desktop\All_projects\Flask23\flaskblog\__init__.py)
+>>> from flaskblog_models import User, Post
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'flaskblog_models'
+>>> from flaskblog_model import User, Post
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ModuleNotFoundError: No module named 'flaskblog_model'
+>>> from flaskblog.models import User, Post
+>>> User.query.all()
+[User('testuser1', 'test1@gmail.com', 'c0eb6fa6a7b17b6b.png'), User('testuser', 'test@gmail.com', 'default.jpg'), User('testuser2', 'test2@gmail.com', 'default.jpg'), User('An actual user', 'jwcamry03@gmail.com', 'default.jpg')]
+>>> Post.query.all()
+[Post('My first post', '2019-07-06 01:39:00.181025'), Post('First updated post', '2019-07-06 01:51:57.200835'), Post('Second update', '2019-07-06 01:52:32.058819'), Post('Cold War Writing 1b', '2019-07-06 02:20:46.387272'), Post('Possibly Greatest Old Man and the Sea essay regarding pride being a great motivator', '2019-07-07 19:38:07.933071'), Post('Top ten greatest games of all time', '2019-07-07 19:57:09.881484'), Post('Top league champions ever', '2019-07-07 19:57:48.478111'), Post('greatest twitch streamers ever', '2019-07-07 20:04:16.139996'), Post('fjd;aklsfjdklsa;fj', '2019-07-07 21:12:34.419826'), Post('iuytiuytiuytiuytiutyiuytpioupoiu;', '2019-07-07 21:12:43.842455'), Post('TOP TEN LCS TEAMS', '2019-07-07 21:12:54.455951'), Post('543254325342', '2019-07-07 21:13:02.572882'), Post('-908-908-098-908-', '2019-07-07 21:13:05.906943'), Post('VBCXZNVBCX,MNZBVNCXZBN,MVCXBZN,VBCNXZ,MV', '2019-07-07 21:13:12.640797'), Post('bvjkclxbvjklcxzkljvn;elwak]', '2019-07-07 21:13:18.010799'), Post('reqwrewqrewqr', '2019-07-07 21:14:16.126571'), Post('iuytiutyiuytetywerteytwtwqterw', '2019-07-07 21:14:21.176518'), Post('iotyurtyteewwretyuioulyjghkfdfsasxCV', '2019-07-07 21:14:26.545543'), Post('yakuza 0', '2019-07-07 21:14:40.787446'), Post('hoco', '2019-07-07 21:15:02.185450')]
+>>> User.query.all()
+[User('testuser1', 'test1@gmail.com', 'c0eb6fa6a7b17b6b.png'), User('testuser', 'test@gmail.com', 'default.jpg'), User('testuser2', 'test2@gmail.com', 'default.jpg'), User('An actual user', 'jwcamry03@gmail.com', 'default.jpg')]
+>>> user = User.query.get(username='An actual user')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: get() got an unexpected keyword argument 'username'
+>>> user = User.query.filter_by(username=An actual user')
+  File "<stdin>", line 1
+    user = User.query.filter_by(username=An actual user')
+                                                 ^
+SyntaxError: invalid syntax
+>>> user = User.query.filter_by(username='An actual user')
+>>> user
+<flask_sqlalchemy.BaseQuery object at 0x000002319F3DEE80>
+>>> user.password
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'BaseQuery' object has no attribute 'password'
+>>> user.email
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'BaseQuery' object has no attribute 'email'
+>>> user.password
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'BaseQuery' object has no attribute 'password'
+>>> User.query.all()\
+...
+[User('testuser1', 'test1@gmail.com', 'c0eb6fa6a7b17b6b.png'), User('testuser', 'test@gmail.com', 'default.jpg'), User('testuser2', 'test2@gmail.com', 'default.jpg'), User('An actual user', 'jwcamry03@gmail.com', 'default.jpg')]
+>>> Post.query.all()
+[Post('My first post', '2019-07-06 01:39:00.181025'), Post('First updated post', '2019-07-06 01:51:57.200835'), Post('Second update', '2019-07-06 01:52:32.058819'), Post('Cold War Writing 1b', '2019-07-06 02:20:46.387272'), Post('Possibly Greatest Old Man and the Sea essay regarding pride being a great motivator', '2019-07-07 19:38:07.933071'), Post('Top ten greatest games of all time', '2019-07-07 19:57:09.881484'), Post('Top league champions ever', '2019-07-07 19:57:48.478111'), Post('greatest twitch streamers ever', '2019-07-07 20:04:16.139996'), Post('fjd;aklsfjdklsa;fj', '2019-07-07 21:12:34.419826'), Post('iuytiuytiuytiuytiutyiuytpioupoiu;', '2019-07-07 21:12:43.842455'), Post('TOP TEN LCS TEAMS', '2019-07-07 21:12:54.455951'), Post('543254325342', '2019-07-07 21:13:02.572882'), Post('-908-908-098-908-', '2019-07-07 21:13:05.906943'), Post('VBCXZNVBCX,MNZBVNCXZBN,MVCXBZN,VBCNXZ,MV', '2019-07-07 21:13:12.640797'), Post('bvjkclxbvjklcxzkljvn;elwak]', '2019-07-07 21:13:18.010799'), Post('reqwrewqrewqr', '2019-07-07 21:14:16.126571'), Post('iuytiutyiuytetywerteytwtwqterw', '2019-07-07 21:14:21.176518'), Post('iotyurtyteewwretyuioulyjghkfdfsasxCV', '2019-07-07 21:14:26.545543'), Post('yakuza 0', '2019-07-07 21:14:40.787446'), Post('hoco', '2019-07-07 21:15:02.185450')]
+>>> post = Post.query.filter_by(username='testuser1')
+Traceback (most recent call last):
+  File "C:\Python37\lib\site-packages\sqlalchemy\orm\base.py", line 399, in _entity_descriptor
+    return getattr(entity, key)
+AttributeError: type object 'Post' has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Python37\lib\site-packages\sqlalchemy\orm\query.py", line 1796, in filter_by
+    for key, value in kwargs.items()
+  File "C:\Python37\lib\site-packages\sqlalchemy\orm\query.py", line 1796, in <listcomp>
+    for key, value in kwargs.items()
+  File "C:\Python37\lib\site-packages\sqlalchemy\orm\base.py", line 402, in _entity_descriptor
+    "Entity '%s' has no property '%s'" % (description, key)
+sqlalchemy.exc.InvalidRequestError: Entity '<class 'flaskblog.models.Post'>' has no property 'username'
+>>> post = Post.query.filter_by(user_id=2)
+>>>
+>>> post
+<flask_sqlalchemy.BaseQuery object at 0x000002319F3DEC18>
+>>> post.all()
+[]
+>>> post = Post.query.filter_by(user_id=1)
+>>> post.all()
+[Post('My first post', '2019-07-06 01:39:00.181025'), Post('First updated post', '2019-07-06 01:51:57.200835'), Post('Second update', '2019-07-06 01:52:32.058819'), Post('Top league champions ever', '2019-07-07 19:57:48.478111'), Post('greatest twitch streamers ever', '2019-07-07 20:04:16.139996'), Post('fjd;aklsfjdklsa;fj', '2019-07-07 21:12:34.419826'), Post('iuytiuytiuytiuytiutyiuytpioupoiu;', '2019-07-07 21:12:43.842455'), Post('TOP TEN LCS TEAMS', '2019-07-07 21:12:54.455951'), Post('543254325342', '2019-07-07 21:13:02.572882'), Post('-908-908-098-908-', '2019-07-07 21:13:05.906943'), Post('VBCXZNVBCX,MNZBVNCXZBN,MVCXBZN,VBCNXZ,MV', '2019-07-07 21:13:12.640797'), Post('bvjkclxbvjklcxzkljvn;elwak]', '2019-07-07 21:13:18.010799'), Post('reqwrewqrewqr', '2019-07-07 21:14:16.126571'), Post('iuytiutyiuytetywerteytwtwqterw', '2019-07-07 21:14:21.176518'), Post('iotyurtyteewwretyuioulyjghkfdfsasxCV', '2019-07-07 21:14:26.545543'), Post('yakuza 0', '2019-07-07 21:14:40.787446'), Post('hoco', '2019-07-07 21:15:02.185450')]
+>>> post = Post.query.filter_by(user_id=3)
+>>> post
+<flask_sqlalchemy.BaseQuery object at 0x000002319F3BABA8>
+>>> post.all()
+[Post('Cold War Writing 1b', '2019-07-06 02:20:46.387272'), Post('Possibly Greatest Old Man and the Sea essay regarding pride being a great motivator', '2019-07-07 19:38:07.933071'), Post('Top ten greatest games of all time', '2019-07-07 19:57:09.881484')]
+>>> User.query.all()
+[User('testuser1', 'test1@gmail.com', 'c0eb6fa6a7b17b6b.png'), User('testuser', 'test@gmail.com', 'default.jpg'), User('testuser2', 'test2@gmail.com', 'default.jpg'), User('An actual user', 'jwcamry03@gmail.com', 'default.jpg')]
+>>> user = User.query.filter_by(username='An actual user')
+>>> user
+<flask_sqlalchemy.BaseQuery object at 0x000002319F3BAE48>
+>>> user.username
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'BaseQuery' object has no attribute 'username'
+>>> user = User.query.filter_by(username='An actual user').first()
+>>> user
+User('An actual user', 'jwcamry03@gmail.com', 'default.jpg')
+>>> user = User.query.filter_by(username='An actual user').all()
+>>> user
+[User('An actual user', 'jwcamry03@gmail.com', 'default.jpg')]
+>>> user = User.query.filter_by(username='An actual user').first()
+>>> user
+User('An actual user', 'jwcamry03@gmail.com', 'default.jpg')
+>>> user.password
+'$2b$12$wSz5qCGyfpz9cdfr0L6d6ubs0wYBI08cl6PJk993QsvSDJrUA7rlu'
+>>> from flask-bcrypt import Bcrypt
+  File "<stdin>", line 1
+    from flask-bcrypt import Bcrypt
+              ^
+SyntaxError: invalid syntax
+>>> from flask_bcrypt import Bcrypt
+>>> pw = user.password
+>>> bcrypt.check_password_hash(pw,'Josephhpesoj')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'bcrypt' is not defined
+>>> bcrypt.check_password_hash(pw,'Josephhpesoj')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'bcrypt' is not defined
+>>> Bcrypt.check_password_hash(pw,'Josephhpesoj')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: check_password_hash() missing 1 required positional argument: 'password'
+>>> Bcrypt.check_password_hash(user.password,'Josephhpesoj')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: check_password_hash() missing 1 required positional argument: 'password'
+>>> Bcrypt.check_password_hash(user.password,'password')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: check_password_hash() missing 1 required positional argument: 'password'
+>>> Bcrypt.check_password_hash(user.password,'Josephhpesoj') and True
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: check_password_hash() missing 1 required positional argument: 'password'
+>>> Bcrypt.generate_password_hash('Josephhpesoj')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: generate_password_hash() missing 1 required positional argument: 'password'
+>>> Bcrypt.generate_password_hash('Josephhpesoj').decode('utf-8')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: generate_password_hash() missing 1 required positional argument: 'password'
+>>> Bcrypt = Bcrypt()
+>>> Bcrypt.generate_password_hash('Josephhpesoj').decode('utf-8')
+'$2b$12$c35uepM3C0pkeLjLWYjwK.HbHVAxUeqjg2d.IpfdipBC5ecI6u.fG'
+>>> Bcrypt.check_password_hash(user.password,'Josephhpesoj') and True
+True
+>>> Bcrypt.check_password_hash(user.password,'password')
+False
+>>> user
+User('An actual user', 'jwcamry03@gmail.com', 'default.jpg')
+>>> user.password
+'$2b$12$wSz5qCGyfpz9cdfr0L6d6ubs0wYBI08cl6PJk993QsvSDJrUA7rlu'
+>>> user.username
+'An actual user'
+>>> user.email
+'jwcamry03@gmail.com'
+>>> user.pic
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'User' object has no attribute 'pic'
+>>> user
+User('An actual user', 'jwcamry03@gmail.com', 'default.jpg')
+>>> User.query.all()
+[User('testuser1', 'test1@gmail.com', 'c0eb6fa6a7b17b6b.png'), User('testuser', 'test@gmail.com', 'default.jpg'), User('testuser2', 'test2@gmail.com', 'default.jpg'), User('An actual user', 'jwcamry03@gmail.com', 'default.jpg'), User('TypingTest', 'JWcamry03@gmail.com', 'default.jpg')]
+>>> User.query.all()[0]
+User('testuser1', 'test1@gmail.com', 'c0eb6fa6a7b17b6b.png')
+>>>

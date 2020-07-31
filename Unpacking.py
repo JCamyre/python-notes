@@ -1,0 +1,32 @@
+a, _, _, b = (1, 2, 3, 4)
+# the _ means that we don't care about the second value in the tuple
+print(a)
+print(b)
+print('*' * 80)
+x, y, *z = (1, 2, 3, 4, 5)
+print(x)
+print(y)
+print(z)
+print('*' * 80)
+
+x, _, *z = (1, 2, 3, 4, 5)
+print(x)
+print(z)
+print('*' * 80)
+
+x, _, _,*z = (1, 2, 3, 4, 5)
+print(x)
+print(z)
+print('*' * 80)
+
+d, e, *f, g = (1, 2, 3, 4, 5, 6, 7)
+print(d)
+print(e)
+print(f)
+print(g)
+print('*' * 80)
+
+d, e, *_, g = (1, 2, 3, 4, 5, 6, 7)
+print(d)
+print(e)
+print(g)

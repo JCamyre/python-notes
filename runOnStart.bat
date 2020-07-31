@@ -1,0 +1,1 @@
+"C:\Python37\python.exe" "C:\Users\JWcam\Desktop\All_projects\runOnStart.py" pause
