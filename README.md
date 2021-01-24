@@ -1,2 +1,2 @@
 # python-notes
-My notes on more niche Python topics.
+My notes on niche Python topics.
